@@ -26,18 +26,17 @@ function App() {
 
   return (
     <div className="App">
-      {Object.keys(data).map(
-        (
-          key // Chuyển đổi object thành array và render
-        ) => (
-          <main key={key} className="container">
+      {
+        // Chuyển đổi object thành array và render
+        Object.keys(data).map((item) => (
+          <main key={item} className="container">
             {/* Bạn có thể thay đổi cách hiển thị thông tin `Teacher` dựa trên cấu trúc dữ liệu của bạn */}
-            <p>SĐT: {data[key].numbers}</p>
-            <p>Email: {data[key].email}</p>
+            <p>SĐT: {data[item].numbers}</p>
+            <p>Email: {data[item].email}</p>
             <FontAwesomeIcon icon={faHouse} className="house-icon" />
           </main>
-        )
-      )}
+        ))
+      }
     </div>
   );
 }
